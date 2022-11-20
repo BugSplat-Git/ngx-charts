@@ -25,8 +25,13 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "allowedCommonJsDependencies": ["emoji-flags", "codemirror", "ajv", "mousetrap", "moment-timezone"],
             "extractLicenses": false,
@@ -85,15 +90,22 @@
             "main": "src/test.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts"]
+            "lintFilePatterns": [
+              "src/**/*.ts"
+            ]
           }
         },
         "e2e": {
@@ -139,7 +151,9 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["projects/swimlane/ngx-charts/src/**/*.ts"]
+            "lintFilePatterns": [
+              "projects/swimlane/ngx-charts/src/**/*.ts"
+            ]
           }
         }
       }
