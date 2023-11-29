@@ -1,6 +1,6 @@
 {
   "name": "@bugsplat/ngx-charts",
-  "version": "20.6.0",
+  "version": "20.7.0",
   "description": "Declarative Charting Framework for Angular",
   "repository": {
     "type": "git",
