@@ -20,8 +20,8 @@ import { TextAnchor } from '../types/text-anchor.enum';
 import { roundedRect } from '../../common/shape.helper';
 
 @Component({
-  selector: 'g[ngx-charts-x-axis-ticks]',
-  template: `
+    selector: 'g[ngx-charts-x-axis-ticks]',
+    template: `
     <svg:g #ticksel>
       <svg:g *ngFor="let tick of ticks" class="tick" [attr.transform]="tickTransform(tick)">
         <ng-container *ngIf="tickFormat(tick) as tickFormatted">
@@ -80,7 +80,8 @@ import { roundedRect } from '../../common/shape.helper';
       </svg:g>
     </svg:g>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class XAxisTicksComponent implements OnChanges, AfterViewInit {
   @Input() scale;
