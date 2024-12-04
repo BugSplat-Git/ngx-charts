@@ -26,8 +26,8 @@ import { ScaleType } from '../common/types/scale-type.enum';
 import { select } from 'd3-selection';
 
 @Component({
-    selector: 'ngx-charts-area-chart',
-    template: `
+  selector: 'ngx-charts-area-chart',
+  template: `
     <ngx-charts-chart
       [view]="[width, height]"
       [showLegend]="legend"
@@ -163,10 +163,10 @@ import { select } from 'd3-selection';
       </svg:g>
     </ngx-charts-chart>
   `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['../common/base-chart.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: false
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['../common/base-chart.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class AreaChartComponent extends BaseChartComponent {
   @Input() legend: boolean = false;

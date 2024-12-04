@@ -7,9 +7,9 @@ import { Color } from '../../utils/color-sets';
 import { ScaleType } from '../types/scale-type.enum';
 
 @Component({
-    selector: 'test-component',
-    template: '',
-    standalone: false
+  selector: 'test-component',
+  template: '',
+  standalone: false
 })
 class TestComponent {
   legendLabel: string = 'Test legend label';
@@ -71,8 +71,12 @@ describe('<ngx-charts-advanced-legend>', () => {
 
     const labelElement = fixture.debugElement.nativeElement.querySelector('.total-label');
     const roundedTotalElement = fixture.debugElement.nativeElement.querySelector('.advanced-pie-legend').children[0];
-    const { legendItemsElements, legendItemValueElements, legendItemLabelElements, legendItemPercentElements } =
-      loadLegendItemElements(fixture);
+    const {
+      legendItemsElements,
+      legendItemValueElements,
+      legendItemLabelElements,
+      legendItemPercentElements
+    } = loadLegendItemElements(fixture);
 
     expect(labelElement).toBeDefined();
     expect(roundedTotalElement).toBeDefined();
@@ -114,8 +118,12 @@ describe('<ngx-charts-advanced-legend>', () => {
     component.percentageFormatting = percentage => Math.round(percentage);
     fixture.detectChanges();
 
-    const { legendItemsElements, legendItemValueElements, legendItemLabelElements, legendItemPercentElements } =
-      loadLegendItemElements(fixture);
+    const {
+      legendItemsElements,
+      legendItemValueElements,
+      legendItemLabelElements,
+      legendItemPercentElements
+    } = loadLegendItemElements(fixture);
 
     expect(legendItemsElements.childElementCount).toBe(6);
     expect(Array.from(legendItemValueElements).map((x: Element) => x.textContent.trim())).toEqual([
@@ -148,8 +156,9 @@ describe('<ngx-charts-advanced-legend>', () => {
     const legendItemsElements = fixture.debugElement.nativeElement.querySelector('.legend-items');
     const legendItemValueElements = fixture.debugElement.nativeElement.querySelectorAll('.legend-items .item-value');
     const legendItemLabelElements = fixture.debugElement.nativeElement.querySelectorAll('.legend-items .item-label');
-    const legendItemPercentElements =
-      fixture.debugElement.nativeElement.querySelectorAll('.legend-items .item-percent');
+    const legendItemPercentElements = fixture.debugElement.nativeElement.querySelectorAll(
+      '.legend-items .item-percent'
+    );
     return {
       legendItemsElements,
       legendItemValueElements,
