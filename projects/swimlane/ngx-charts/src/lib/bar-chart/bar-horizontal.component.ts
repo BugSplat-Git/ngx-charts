@@ -92,7 +92,8 @@ import { select } from 'd3-selection';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['../common/base-chart.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class BarHorizontalComponent extends BaseChartComponent {
   @Input() legend = false;
